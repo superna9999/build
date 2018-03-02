@@ -1,0 +1,24 @@
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
+index 4e0b3c7..789e930 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
+@@ -385,3 +385,19 @@
+ 		reset-duration-us = <3000>;
+ 	};
+ };
++
++&pwm_ab {
++	status = "okay";
++	pinctrl-0 = <&pwm_a_x_pins>;
++	pinctrl-names = "default";
++	clocks = <&clkc CLKID_FCLK_DIV4>;
++	clock-names = "clkin0";
++};
++
++&pwm_ef {
++	status = "okay";
++	pinctrl-0 = <&pwm_f_x_pins>;
++	pinctrl-names = "default";
++	clocks = <&clkc CLKID_FCLK_DIV4>;
++	clock-names = "clkin1";
++};
